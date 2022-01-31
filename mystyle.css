@@ -1,0 +1,9 @@
+body {
+    background: linear-gradient(90deg, #efd5ff 0%, #515ada 100%);
+}
+   
+h1 {
+    font-family: "Monaco", "Courier New", monospace;
+    color: white;
+    margin-left: 20px;
+}
