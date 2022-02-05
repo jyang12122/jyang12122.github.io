@@ -47,90 +47,249 @@
   <body>
     <h1><center> 현2 & 쩡2 사이트에 오신걸 환영합니다~^^ </center></h1>
     <div class="container"> 
-    <button type="button" class="btn btn-primary ms-5 me-5" data-bs-toggle="button" autocomplete="off">드라마 / 영화 추가하기</button>
+      <button type="button" class="btn btn-primary ms-5 me-5" data-bs-toggle="modal" data-bs-target="#addCard">
+        드라마 / 영화 추가하기
+      </button>
 
-    <div class="container shadow-lg p-3 mb-5 mt-2 bg-body rounded"> 
-      <div class="row justify-content-center"> 
-        <div class="col-3 mx-3">
-          <div class="card my-3 p-2 shadow-lg p-3 mb-5 bg-body rounded" style="width: 18rem;">
-            <img src="images/netflix-g57451e5bb_640.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <!-- Modal -->
+      <div class="modal fade" id="addCard" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">드라마 및 영화 추가</h5>
+              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" onclick="clearForm()">
+                <span aria-hidden="true">&times;</span>
+              </button>
             </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">An item</li>
-              <li class="list-group-item">A second item</li>
-              <li class="list-group-item">A third item</li>
-            </ul>
-            <div class="card-body">
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
+            <div class="modal-body">
+              <form id = "form1">
+                <div class="mb-3">
+                  <label for="CardName" class="form-label">시리즈/영화 제목</label>
+                  <input type="CardName" class="form-control" id="CardName1" aria-describedby="cardname">
+                </div>
+
+                <div class="mb-3">
+                  <label for="Contents" class="form-label">줄거리</label>
+                  <textarea class="form-control" id="contents1" rows="5"></textarea>
+                </div>
+
+                <div class="mb-3">
+                  <label for="Genres" class="form-label">장르</label>
+                    <input class="form-control" list="datalistOptions" id="genres" placeholder="검색...">
+                    <datalist id="datalistOptions">
+                      <option value="액션">
+                      <option value="호러/공포">
+                      <option value="스릴러">
+                      <option value="코미디">
+                      <option value="로맨스">
+                    </datalist>
+                </div>
+
+                <div class="mb-3">
+                  <label for="links" class="form-label">넷플릭스 및 영상 링크</label>
+                  <input type="links" class="form-control" id="links1" aria-describedby="link">
+                </div>  
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="clearForm()">닫기</button>
+              <button type="button" class="btn btn-primary">추가하기</button>
             </div>
           </div>
-        </div> 
-        <div class="col-3 mx-3">
-            <div class="card my-3 p-2 mx-auto shadow-lg p-3 mb-5 bg-body rounded" style="width: 18rem;">
-                <img src="images/netflix-g57451e5bb_640.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">An item</li>
-                  <li class="list-group-item">A second item</li>
-                  <li class="list-group-item">A third item</li>
-                </ul>
-                <div class="card-body">
-                  <a href="#" class="card-link">Card link</a>
-                  <a href="#" class="card-link">Another link</a>
-                </div>
-              </div>
-        </div> 
-        <div class="col-3 mx-3">
-            <div class="card my-3 p-2 shadow-lg p-3 mb-5 bg-body rounded" style="width: 18rem;">
-                <img src="images/netflix-g57451e5bb_640.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">An item</li>
-                  <li class="list-group-item">A second item</li>
-                  <li class="list-group-item">A third item</li>
-                </ul>
-                <div class="card-body">
-                  <a href="#" class="card-link">Card link</a>
-                  <a href="#" class="card-link">Another link</a>
-                </div>
-              </div>
-        </div> 
-      </div> 
-      <div class="row"> 
-        <div class="col-3">
-
-        </div> 
-        <div class="col-3">
-
-        </div> 
-        <div class="col-3">
-
         </div>
-       </div>
-       <nav aria-label="Page navigation example">
-       <ul class="pagination justify-content-center">
-         <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-         <li class="page-item"><a class="page-link" href="#">1</a></li>
-         <li class="page-item"><a class="page-link" href="#">2</a></li>
-         <li class="page-item"><a class="page-link" href="#">3</a></li>
-         <li class="page-item"><a class="page-link" href="#">Next</a></li>
-       </ul>
-     </nav>   
-       </div>
+      </div>
+
+    <div class = "Scroll">  
+      <div class="container shadow-lg p-3 mb-5 mt-2 bg-body rounded">
+          <div class="row justify-content-center"> 
+            <div class="col-3 mx-3">
+              <div class="card my-3 p-2 shadow-lg p-3 mb-5 bg-body rounded" style="width: 18rem;">
+                <img src="images/netflix-g57451e5bb_640.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">An item</li>
+                  <li class="list-group-item">A second item</li>
+                  <li class="list-group-item">A third item</li>
+                </ul>
+                <div class="card-body">
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+            </div> 
+            <div class="col-3 mx-3">
+                <div class="card my-3 p-2 mx-auto shadow-lg p-3 mb-5 bg-body rounded" style="width: 18rem;">
+                    <img src="images/netflix-g57451e5bb_640.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">An item</li>
+                      <li class="list-group-item">A second item</li>
+                      <li class="list-group-item">A third item</li>
+                    </ul>
+                    <div class="card-body">
+                      <a href="#" class="card-link">Card link</a>
+                      <a href="#" class="card-link">Another link</a>
+                    </div>
+                  </div>
+            </div> 
+
+            <div class="col-3 mx-3">
+                <div class="card my-3 p-2 shadow-lg p-3 mb-5 bg-body rounded" style="width: 18rem;">
+                  <img src="images/netflix-g57451e5bb_640.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                      <li class="list-group-item">An item</li>
+                      <li class="list-group-item">A second item</li>
+                      <li class="list-group-item">A third item</li>
+                  </ul>
+                  <div class="card-body">
+                      <a href="#" class="card-link">Card link</a>
+                      <a href="#" class="card-link">Another link</a>
+                  </div>
+                </div>
+              </div> 
+          
+          </div> 
+          
+          <div class="row justify-content-center"> 
+            <div class="col-3 mx-3">
+              <div class="card my-3 p-2 shadow-lg p-3 mb-5 bg-body rounded" style="width: 18rem;">
+                <img src="images/netflix-g57451e5bb_640.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">An item</li>
+                    <li class="list-group-item">A second item</li>
+                    <li class="list-group-item">A third item</li>
+                </ul>
+                <div class="card-body">
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+            </div> 
+            <div class="col-3 mx-3">
+              <div class="card my-3 p-2 shadow-lg p-3 mb-5 bg-body rounded" style="width: 18rem;">
+                <img src="images/netflix-g57451e5bb_640.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">An item</li>
+                    <li class="list-group-item">A second item</li>
+                    <li class="list-group-item">A third item</li>
+                </ul>
+                <div class="card-body">
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+            </div> 
+            <div class="col-3 mx-3">
+              <div class="card my-3 p-2 shadow-lg p-3 mb-5 bg-body rounded" style="width: 18rem;">
+                <img src="images/netflix-g57451e5bb_640.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">An item</li>
+                    <li class="list-group-item">A second item</li>
+                    <li class="list-group-item">A third item</li>
+                </ul>
+                <div class="card-body">
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row justify-content-center"> 
+            <div class="col-3 mx-3">
+              <div class="card my-3 p-2 shadow-lg p-3 mb-5 bg-body rounded" style="width: 18rem;">
+                <img src="images/netflix-g57451e5bb_640.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">An item</li>
+                    <li class="list-group-item">A second item</li>
+                    <li class="list-group-item">A third item</li>
+                </ul>
+                <div class="card-body">
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+            </div> 
+            <div class="col-3 mx-3">
+              <div class="card my-3 p-2 shadow-lg p-3 mb-5 bg-body rounded" style="width: 18rem;">
+                <img src="images/netflix-g57451e5bb_640.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">An item</li>
+                    <li class="list-group-item">A second item</li>
+                    <li class="list-group-item">A third item</li>
+                </ul>
+                <div class="card-body">
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+            </div> 
+            <div class="col-3 mx-3">
+              <div class="card my-3 p-2 shadow-lg p-3 mb-5 bg-body rounded" style="width: 18rem;">
+                <img src="images/netflix-g57451e5bb_640.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">An item</li>
+                    <li class="list-group-item">A second item</li>
+                    <li class="list-group-item">A third item</li>
+                </ul>
+                <div class="card-body">
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <nav aria-label="Page navigation example">
+          <ul class="pagination justify-content-center">
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          </ul>
+          </nav>   
+        </div>
+      </div>
     </div>
-    
+  </div>  
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="myScript.js"></script>
   </body>
 </html>
